@@ -1,841 +1,1209 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Edgar Orjuela | Portafolio Profesional</title>
 
-    <meta name="description" content="Portafolio profesional de Edgar Orjuela - Ingeniería de Sistemas, transformación digital, LMS, analítica de datos y automatización.">
+    <meta
+        name="description"
+        content="Portafolio profesional de Edgar Orjuela - Ingeniería de Sistemas, transformación digital, LMS, analítica de datos y automatización."
+    >
 
+    <!-- FUENTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-        /* =====================================================
-           VARIABLES
-        ===================================================== */
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-        :root {
-            --verde: #3E4729;
-            --verde-oscuro: #252A19;
-            --verde-claro: #EEF0E8;
 
-            --naranja: #F5841F;
-            --naranja-claro: #FFF1E5;
+<style>
 
-            --blanco: #FFFFFF;
+/* =========================================================
+   VARIABLES
+========================================================= */
 
-            --gris-fondo: #F3F4F0;
-            --gris: #454545;
-            --gris-claro: #D9DCD4;
+:root {
 
-            --negro: #1F1F1F;
+    --verde: #3E4729;
 
-            --max-width: 1150px;
-        }
+    --verde-oscuro: #252A19;
 
+    --verde-claro: #EEF0E8;
 
-        /* =====================================================
-           GENERAL
-        ===================================================== */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    --naranja: #F5841F;
 
-        body {
-            font-family: "Inter", Arial, sans-serif;
-            color: var(--negro);
-            background: var(--blanco);
-            line-height: 1.6;
-        }
+    --naranja-claro: #FFF1E5;
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
 
-        .container {
-            width: 90%;
-            max-width: var(--max-width);
-            margin: auto;
-        }
+    /* NUEVO COLOR */
 
+    --azul-petroleo: #2F6F73;
 
-        /* =====================================================
-           HEADER
-        ===================================================== */
+    --azul-claro: #E8F2F2;
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
 
-            background: rgba(255,255,255,0.97);
+    --blanco: #FFFFFF;
 
-            border-bottom: 1px solid var(--gris-claro);
 
-            backdrop-filter: blur(10px);
-        }
+    --gris-fondo: #F3F4F0;
 
-        .navbar {
-            min-height: 75px;
+    --gris: #454545;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    --gris-claro: #D9DCD4;
 
-            gap: 30px;
-        }
 
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--verde);
+    --negro: #1F1F1F;
 
-            white-space: nowrap;
-        }
 
-        .logo span {
-            color: var(--naranja);
-        }
+    --max-width: 1150px;
 
-        nav {
-            display: flex;
-            gap: 8px;
+}
 
-            flex-wrap: wrap;
-            justify-content: center;
-        }
 
-        nav a {
-            padding: 8px 12px;
+/* =========================================================
+   GENERAL
+========================================================= */
 
-            border-radius: 20px;
+* {
 
-            font-size: 13px;
-            font-weight: 600;
+    margin: 0;
 
-            color: var(--verde);
+    padding: 0;
 
-            transition: 0.3s;
-        }
+    box-sizing: border-box;
 
-        nav a:hover {
-            background: var(--verde-claro);
-            color: var(--naranja);
-        }
+    scroll-behavior: smooth;
 
+}
 
-        /* =====================================================
-           HERO
-        ===================================================== */
 
-        .hero {
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--verde) 0%,
-                    var(--verde-oscuro) 100%
-                );
+body {
 
-            color: white;
+    font-family: "Inter", Arial, sans-serif;
 
-            padding: 90px 0;
-        }
+    color: var(--negro);
 
-        .hero-grid {
-            display: grid;
+    background: var(--blanco);
 
-            grid-template-columns:
-                1.4fr
-                0.8fr;
+    line-height: 1.6;
 
-            align-items: center;
+}
 
-            gap: 70px;
-        }
 
-        .eyebrow {
-            display: inline-block;
+a {
 
-            background: rgba(255,255,255,0.12);
+    text-decoration: none;
 
-            border: 1px solid rgba(255,255,255,0.25);
+    color: inherit;
 
-            padding: 7px 15px;
+}
 
-            border-radius: 30px;
 
-            font-size: 13px;
+.container {
 
-            font-weight: 700;
+    width: 90%;
 
-            letter-spacing: 1px;
+    max-width: var(--max-width);
 
-            margin-bottom: 20px;
-        }
+    margin: auto;
 
-        .hero h1 {
-            font-size: clamp(42px, 6vw, 68px);
+}
 
-            line-height: 1.05;
 
-            margin-bottom: 25px;
+/* =========================================================
+   HEADER
+========================================================= */
 
-            max-width: 800px;
-        }
+header {
 
-        .hero h1 span {
-            color: var(--naranja);
-        }
+    position: sticky;
 
-        .hero-description {
-            font-size: 18px;
+    top: 0;
 
-            max-width: 700px;
+    z-index: 1000;
 
-            color: #F0F0F0;
+    background: rgba(255,255,255,0.97);
 
-            margin-bottom: 30px;
-        }
+    border-bottom: 1px solid var(--gris-claro);
 
-        .tags {
-            display: flex;
+    backdrop-filter: blur(10px);
 
-            gap: 10px;
+}
 
-            flex-wrap: wrap;
 
-            margin-bottom: 30px;
-        }
+.navbar {
 
-        .tag {
-            padding: 7px 13px;
+    min-height: 75px;
 
-            border-radius: 20px;
+    display: flex;
 
-            background: rgba(255,255,255,0.1);
+    justify-content: space-between;
 
-            border: 1px solid rgba(255,255,255,0.25);
+    align-items: center;
 
-            font-size: 12px;
+    gap: 30px;
 
-            font-weight: 600;
-        }
+}
 
-        .buttons {
-            display: flex;
 
-            gap: 12px;
+.logo {
 
-            flex-wrap: wrap;
-        }
+    font-size: 22px;
 
-        .btn {
-            display: inline-block;
+    font-weight: 800;
 
-            padding: 13px 22px;
+    color: var(--verde);
 
-            border-radius: 8px;
+    white-space: nowrap;
 
-            font-weight: 700;
+}
 
-            font-size: 14px;
 
-            transition: 0.3s;
-        }
+.logo span {
 
-        .btn-primary {
-            background: var(--naranja);
+    color: var(--naranja);
 
-            color: white;
-        }
+}
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
 
-            opacity: 0.9;
-        }
+nav {
 
-        .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.6);
+    display: flex;
 
-            color: white;
-        }
+    gap: 6px;
 
-        .btn-secondary:hover {
-            background: white;
+    flex-wrap: wrap;
 
-            color: var(--verde);
-        }
+    justify-content: center;
 
+}
 
-        /* =====================================================
-           FOTO DE PERFIL
-        ===================================================== */
 
-        .profile-card {
-            background: white;
+nav a {
 
-            color: var(--negro);
+    padding: 8px 11px;
 
-            border-radius: 25px;
+    border-radius: 20px;
 
-            padding: 35px;
+    font-size: 13px;
 
-            text-align: center;
+    font-weight: 600;
 
-            box-shadow:
-                0 20px 60px rgba(0,0,0,0.25);
-        }
+    color: var(--verde);
 
-        .profile-circle {
-            width: 200px;
-            height: 200px;
+    transition: 0.3s;
 
-            margin: 0 auto 25px;
+}
 
-            border-radius: 50%;
 
-            overflow: hidden;
+nav a:hover {
 
-            border: 7px solid white;
+    background: var(--verde-claro);
 
-            outline: 5px solid var(--naranja);
+    color: var(--naranja);
 
-            box-shadow:
-                0 10px 35px rgba(0,0,0,0.25);
+}
 
-            background: var(--verde-claro);
-        }
 
-        .profile-circle img {
-            width: 100%;
-            height: 100%;
+/* =========================================================
+   HERO
+========================================================= */
 
-            display: block;
+.hero {
 
-            object-fit: cover;
-        }
+    background:
 
-        .profile-card h3 {
-            color: var(--verde);
+        linear-gradient(
 
-            font-size: 22px;
+            135deg,
 
-            margin-bottom: 6px;
-        }
+            var(--verde) 0%,
 
-        .profile-card p {
-            color: #444444;
+            var(--verde-oscuro) 100%
 
-            font-size: 14px;
-        }
+        );
 
-        .profile-line {
-            width: 50px;
-            height: 4px;
+    color: white;
 
-            background: var(--naranja);
+    padding: 90px 0;
 
-            margin: 18px auto;
+}
 
-            border-radius: 5px;
-        }
 
+.hero-grid {
 
-        /* =====================================================
-           SECCIONES
-        ===================================================== */
+    display: grid;
 
-        section {
-            padding: 90px 0;
-        }
+    grid-template-columns: 1.4fr 0.8fr;
 
-        section:nth-child(even) {
-            background: var(--gris-fondo);
-        }
+    align-items: center;
 
-        .section-title {
-            margin-bottom: 45px;
-        }
+    gap: 70px;
 
-        .section-title small {
-            color: var(--naranja);
+}
 
-            font-weight: 800;
 
-            text-transform: uppercase;
+/* =========================================================
+   TITULO PEQUEÑO
+========================================================= */
 
-            letter-spacing: 1.5px;
+.eyebrow {
 
-            font-size: 12px;
-        }
+    display: inline-block;
 
-        .section-title h2 {
-            color: var(--verde);
+    background: var(--azul-petroleo);
 
-            font-size: 36px;
+    color: white;
 
-            margin-top: 8px;
-        }
+    padding: 9px 17px;
 
-        .section-title p {
-            color: #454545;
+    border-radius: 30px;
 
-            max-width: 700px;
+    font-size: 13px;
 
-            margin-top: 10px;
-        }
+    font-weight: 800;
 
+    letter-spacing: 1px;
 
-        /* =====================================================
-           SOBRE MI
-        ===================================================== */
+    margin-bottom: 22px;
 
-        .about-grid {
-            display: grid;
+}
 
-            grid-template-columns:
-                1fr
-                1fr;
 
-            gap: 50px;
+/* =========================================================
+   TITULO PRINCIPAL
+========================================================= */
 
-            align-items: start;
-        }
+.hero h1 {
 
-        .about-text p {
-            margin-bottom: 18px;
+    font-size: clamp(42px, 6vw, 68px);
 
-            color: #333333;
-        }
+    line-height: 1.05;
 
-        .highlight {
-            background: var(--verde-claro);
+    margin-bottom: 25px;
 
-            border-left: 5px solid var(--naranja);
+    max-width: 800px;
 
-            padding: 25px;
+    color: #FFFFFF;
 
-            border-radius: 8px;
-        }
+}
 
-        .highlight strong {
-            color: var(--verde);
 
-            display: block;
+.hero h1 span {
 
-            margin-bottom: 8px;
-        }
+    color: var(--naranja);
 
-        .highlight p {
-            color: #333333;
-        }
+}
 
 
-        /* =====================================================
-           ESPECIALIDADES
-        ===================================================== */
+/* =========================================================
+   DESCRIPCION
+========================================================= */
 
-        .cards {
-            display: grid;
+.hero-description {
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    font-size: 18px;
 
-            gap: 25px;
-        }
+    max-width: 700px;
 
-        .card {
-            background: white;
+    color: #FFFFFF;
 
-            border: 1px solid var(--gris-claro);
+    margin-bottom: 30px;
 
-            border-radius: 15px;
+}
 
-            padding: 30px;
 
-            transition: 0.3s;
-        }
+/* =========================================================
+   ETIQUETAS
+========================================================= */
 
-        .card:hover {
-            transform: translateY(-5px);
+.tags {
 
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.08);
-        }
+    display: flex;
 
-        .card-icon {
-            width: 50px;
-            height: 50px;
+    gap: 10px;
 
-            display: flex;
+    flex-wrap: wrap;
 
-            align-items: center;
+    margin-bottom: 30px;
 
-            justify-content: center;
+}
 
-            border-radius: 12px;
 
-            background: var(--verde-claro);
+.tag {
 
-            color: var(--verde);
+    padding: 8px 15px;
 
-            font-size: 15px;
+    border-radius: 20px;
 
-            font-weight: 800;
+    background: var(--azul-petroleo);
 
-            margin-bottom: 20px;
-        }
+    color: #FFFFFF;
 
-        .card h3 {
-            color: var(--verde);
+    border: none;
 
-            margin-bottom: 10px;
+    font-size: 12px;
 
-            font-size: 19px;
-        }
+    font-weight: 700;
 
-        .card p {
-            color: #3F3F3F;
+}
 
-            font-size: 14px;
-        }
 
+/* =========================================================
+   BOTONES
+========================================================= */
 
-        /* =====================================================
-           TECNOLOGIAS
-        ===================================================== */
+.buttons {
 
-        .tech-grid {
-            display: flex;
+    display: flex;
 
-            flex-wrap: wrap;
+    gap: 12px;
 
-            gap: 12px;
-        }
+    flex-wrap: wrap;
 
-        .tech {
-            padding: 10px 16px;
+}
 
-            border-radius: 25px;
 
-            background: white;
+.btn {
 
-            border: 1px solid var(--gris-claro);
+    display: inline-block;
 
-            color: var(--verde);
+    padding: 13px 22px;
 
-            font-size: 14px;
+    border-radius: 8px;
 
-            font-weight: 700;
-        }
+    font-weight: 700;
 
-        .tech:hover {
-            border-color: var(--naranja);
+    font-size: 14px;
 
-            color: var(--naranja);
-        }
+    transition: 0.3s;
 
+}
 
-        /* =====================================================
-           PROYECTOS
-        ===================================================== */
 
-        .projects {
-            display: grid;
+.btn-primary {
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    background: var(--naranja);
 
-            gap: 25px;
-        }
+    color: white;
 
-        .project {
-            border-radius: 15px;
+}
 
-            overflow: hidden;
 
-            background: white;
+.btn-primary:hover {
 
-            border: 1px solid var(--gris-claro);
-        }
+    transform: translateY(-2px);
 
-        .project-top {
-            height: 8px;
+    opacity: 0.9;
 
-            background: var(--naranja);
-        }
+}
 
-        .project-content {
-            padding: 28px;
-        }
 
-        .project-content h3 {
-            color: var(--verde);
+.btn-secondary {
 
-            margin-bottom: 12px;
-        }
+    border: 1px solid rgba(255,255,255,0.7);
 
-        .project-content p {
-            color: #3F3F3F;
+    color: white;
 
-            font-size: 14px;
+}
 
-            margin-bottom: 18px;
-        }
 
-        .project-label {
-            font-size: 11px;
+.btn-secondary:hover {
 
-            font-weight: 800;
+    background: white;
 
-            color: var(--naranja);
+    color: var(--verde);
 
-            text-transform: uppercase;
+}
 
-            margin-bottom: 5px;
-        }
 
+/* =========================================================
+   TARJETA DE PERFIL
+========================================================= */
 
-        /* =====================================================
-           EXPERIENCIA
-        ===================================================== */
+.profile-card {
 
-        .timeline {
-            border-left: 3px solid var(--verde);
+    background: white;
 
-            padding-left: 30px;
-        }
+    color: var(--negro);
 
-        .timeline-item {
-            margin-bottom: 35px;
+    border-radius: 25px;
 
-            position: relative;
-        }
+    padding: 35px;
 
-        .timeline-item::before {
-            content: "";
+    text-align: center;
 
-            width: 13px;
-            height: 13px;
+    box-shadow:
 
-            position: absolute;
+        0 20px 60px rgba(0,0,0,0.25);
 
-            left: -38px;
+}
 
-            top: 5px;
 
-            border-radius: 50%;
+/* =========================================================
+   FOTO
+========================================================= */
 
-            background: var(--naranja);
+.profile-circle {
 
-            border: 3px solid white;
-        }
+    width: 200px;
 
-        .timeline-item span {
-            font-size: 12px;
+    height: 200px;
 
-            font-weight: 800;
+    margin: 0 auto 25px;
 
-            color: var(--naranja);
-        }
+    border-radius: 50%;
 
-        .timeline-item h3 {
-            color: var(--verde);
+    overflow: hidden;
 
-            margin: 5px 0;
-        }
+    border: 7px solid white;
 
-        .timeline-item p {
-            color: #3F3F3F;
-        }
+    outline: 5px solid var(--naranja);
 
+    box-shadow:
 
-        /* =====================================================
-           FORMACION
-        ===================================================== */
+        0 10px 35px rgba(0,0,0,0.25);
 
-        .education {
-            display: grid;
+    background: var(--verde-claro);
 
-            grid-template-columns:
-                repeat(2, 1fr);
+}
 
-            gap: 25px;
-        }
 
-        .education-item {
-            padding: 25px;
+.profile-circle img {
 
-            border-radius: 12px;
+    width: 100%;
 
-            background: white;
+    height: 100%;
 
-            border: 1px solid var(--gris-claro);
-        }
+    display: block;
 
-        .education-item h3 {
-            color: var(--verde);
+    object-fit: cover;
 
-            font-size: 18px;
-        }
+}
 
-        .education-item p {
-            color: #3F3F3F;
 
-            margin-top: 6px;
+/* =========================================================
+   TEXTO TARJETA
+========================================================= */
 
-            font-size: 14px;
-        }
+.profile-card h3 {
 
+    color: var(--verde);
 
-        /* =====================================================
-           CONTACTO
-        ===================================================== */
+    font-size: 22px;
 
-        .contact {
-            background: var(--verde) !important;
+    margin-bottom: 6px;
 
-            color: white;
-        }
+}
 
-        .contact .section-title h2 {
-            color: white;
-        }
 
-        .contact .section-title p {
-            color: #F1F1F1;
-        }
+.profile-card p {
 
-        .contact-box {
-            background: white;
+    color: #444444;
 
-            color: var(--negro);
+    font-size: 14px;
 
-            border-radius: 18px;
+}
 
-            padding: 35px;
 
-            display: flex;
+.profile-line {
 
-            justify-content: space-between;
+    width: 50px;
 
-            align-items: center;
+    height: 4px;
 
-            gap: 30px;
-        }
+    background: var(--naranja);
 
-        .contact-box h3 {
-            color: var(--verde);
+    margin: 18px auto;
 
-            margin-bottom: 8px;
-        }
+    border-radius: 5px;
 
-        .contact-box p {
-            color: #444444;
-        }
+}
 
 
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+/* =========================================================
+   SECCIONES
+========================================================= */
 
-        footer {
-            background: var(--verde-oscuro);
+section {
 
-            color: white;
+    padding: 90px 0;
 
-            padding: 30px 0;
+}
 
-            text-align: center;
 
-            font-size: 13px;
-        }
+section:nth-child(even) {
 
-        footer span {
-            color: var(--naranja);
-        }
+    background: var(--gris-fondo);
 
+}
 
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
 
-        @media (max-width: 900px) {
+.section-title {
 
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
+    margin-bottom: 45px;
 
-            .cards,
-            .projects {
-                grid-template-columns: 1fr 1fr;
-            }
+}
 
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
 
-            .navbar {
-                flex-direction: column;
+.section-title small {
 
-                padding: 15px 0;
-            }
-        }
+    color: var(--naranja);
 
+    font-weight: 800;
 
-        @media (max-width: 600px) {
+    text-transform: uppercase;
 
-            section {
-                padding: 60px 0;
-            }
+    letter-spacing: 1.5px;
 
-            .hero {
-                padding: 60px 0;
-            }
+    font-size: 12px;
 
-            .hero h1 {
-                font-size: 42px;
-            }
+}
 
-            .cards,
-            .projects,
-            .education {
-                grid-template-columns: 1fr;
-            }
 
-            .profile-circle {
-                width: 170px;
-                height: 170px;
-            }
+.section-title h2 {
 
-            .contact-box {
-                flex-direction: column;
+    color: var(--verde);
 
-                align-items: flex-start;
-            }
+    font-size: 36px;
 
-            nav {
-                gap: 3px;
-            }
+    margin-top: 8px;
 
-            nav a {
-                font-size: 12px;
+}
 
-                padding: 6px 8px;
-            }
-        }
 
-    </style>
+.section-title p {
+
+    color: #454545;
+
+    max-width: 700px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+   SOBRE MI
+========================================================= */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: start;
+
+}
+
+
+.about-text p {
+
+    margin-bottom: 18px;
+
+    color: #333333;
+
+}
+
+
+.highlight {
+
+    background: var(--azul-claro);
+
+    border-left: 5px solid var(--azul-petroleo);
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+}
+
+
+.highlight strong {
+
+    color: var(--verde);
+
+    display: block;
+
+    margin-bottom: 8px;
+
+}
+
+
+.highlight p {
+
+    color: #333333;
+
+}
+
+
+/* =========================================================
+   ESPECIALIDADES
+========================================================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    border: 1px solid var(--gris-claro);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,0.08);
+
+}
+
+
+.card-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--azul-claro);
+
+    color: var(--azul-petroleo);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+
+.card h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 10px;
+
+    font-size: 19px;
+
+}
+
+
+.card p {
+
+    color: #3F3F3F;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   TECNOLOGIAS
+========================================================= */
+
+.tech-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.tech {
+
+    padding: 10px 16px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    border: 1px solid var(--gris-claro);
+
+    color: var(--verde);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+
+.tech:hover {
+
+    border-color: var(--azul-petroleo);
+
+    color: var(--azul-petroleo);
+
+}
+
+
+/* =========================================================
+   PROYECTOS
+========================================================= */
+
+.projects {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.project {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--gris-claro);
+
+    transition: 0.3s;
+
+}
+
+
+.project:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,0.08);
+
+}
+
+
+.project-top {
+
+    height: 8px;
+
+    background: var(--naranja);
+
+}
+
+
+.project-content {
+
+    padding: 28px;
+
+}
+
+
+.project-content h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 12px;
+
+}
+
+
+.project-content p {
+
+    color: #3F3F3F;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.project-label {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: var(--azul-petroleo);
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =========================================================
+   EXPERIENCIA
+========================================================= */
+
+.timeline {
+
+    border-left: 3px solid var(--verde);
+
+    padding-left: 30px;
+
+}
+
+
+.timeline-item {
+
+    margin-bottom: 35px;
+
+    position: relative;
+
+}
+
+
+.timeline-item::before {
+
+    content: "";
+
+    width: 13px;
+
+    height: 13px;
+
+    position: absolute;
+
+    left: -38px;
+
+    top: 5px;
+
+    border-radius: 50%;
+
+    background: var(--naranja);
+
+    border: 3px solid white;
+
+}
+
+
+.timeline-item span {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: var(--naranja);
+
+}
+
+
+.timeline-item h3 {
+
+    color: var(--verde);
+
+    margin: 5px 0;
+
+}
+
+
+.timeline-item p {
+
+    color: #3F3F3F;
+
+}
+
+
+/* =========================================================
+   FORMACION
+========================================================= */
+
+.education {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.education-item {
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    border: 1px solid var(--gris-claro);
+
+}
+
+
+.education-item h3 {
+
+    color: var(--verde);
+
+    font-size: 18px;
+
+}
+
+
+.education-item p {
+
+    color: #3F3F3F;
+
+    margin-top: 6px;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contact {
+
+    background: var(--verde) !important;
+
+    color: white;
+
+}
+
+
+.contact .section-title h2 {
+
+    color: white;
+
+}
+
+
+.contact .section-title p {
+
+    color: #FFFFFF;
+
+}
+
+
+.contact .section-title small {
+
+    color: var(--naranja);
+
+}
+
+
+.contact-box {
+
+    background: white;
+
+    color: var(--negro);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.contact-box h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 8px;
+
+}
+
+
+.contact-box p {
+
+    color: #444444;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    background: var(--verde-oscuro);
+
+    color: white;
+
+    padding: 30px 0;
+
+    text-align: center;
+
+    font-size: 13px;
+
+}
+
+
+footer span {
+
+    color: var(--naranja);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cards,
+    .projects {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .navbar {
+
+        flex-direction: column;
+
+        padding: 15px 0;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+
+        padding: 60px 0;
+
+    }
+
+
+    .hero {
+
+        padding: 60px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .cards,
+    .projects,
+    .education {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-circle {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+    .contact-box {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    nav {
+
+        gap: 3px;
+
+    }
+
+
+    nav a {
+
+        font-size: 12px;
+
+        padding: 6px 8px;
+
+    }
+
+}
+
+</style>
+
 </head>
 
 
@@ -850,9 +1218,16 @@
 
     <div class="container navbar">
 
-        <a href="#inicio" class="logo">
+
+        <a
+            href="#inicio"
+            class="logo"
+        >
+
             Edgar <span>Orjuela</span>
+
         </a>
+
 
         <nav>
 
@@ -886,6 +1261,7 @@
 
         </nav>
 
+
     </div>
 
 </header>
@@ -896,24 +1272,34 @@
      HERO
 ===================================================== -->
 
-<section class="hero" id="inicio">
+<section
+    class="hero"
+    id="inicio"
+>
 
     <div class="container hero-grid">
 
 
+        <!-- TEXTO -->
+
         <div>
 
+
             <div class="eyebrow">
+
                 INGENIERO DE SISTEMAS
+
             </div>
 
 
             <h1>
 
                 Tecnología que
+
                 <span>
                     transforma
                 </span>
+
                 procesos.
 
             </h1>
@@ -952,11 +1338,14 @@
 
             <div class="buttons">
 
+
                 <a
                     href="#proyectos"
                     class="btn btn-primary"
                 >
+
                     Ver proyectos
+
                 </a>
 
 
@@ -964,25 +1353,32 @@
                     href="#contacto"
                     class="btn btn-secondary"
                 >
+
                     Contactarme
+
                 </a>
 
+
             </div>
+
 
         </div>
 
 
 
-        <!-- FOTO -->
+        <!-- TARJETA FOTO -->
 
         <div class="profile-card">
 
+
             <div class="profile-circle">
+
 
                 <img
                     src="assets/images/edgar.JPG"
                     alt="Edgar Orjuela"
                 >
+
 
             </div>
 
@@ -999,9 +1395,11 @@
                 Tecnología · Educación · Datos
             </p>
 
+
             <p>
                 DIDE · Universidad El Bosque
             </p>
+
 
         </div>
 
@@ -1014,7 +1412,7 @@
 
 <!-- =====================================================
      SOBRE MI
-===================================================== -->
+========================================================= -->
 
 <section id="sobre-mi">
 
@@ -1023,21 +1421,26 @@
 
         <div class="section-title">
 
+
             <small>
                 Perfil profesional
             </small>
+
 
             <h2>
                 Sobre mí
             </h2>
 
+
         </div>
+
 
 
         <div class="about-grid">
 
 
             <div class="about-text">
+
 
                 <p>
 
@@ -1066,14 +1469,18 @@
 
                 </p>
 
+
             </div>
+
 
 
             <div class="highlight">
 
+
                 <strong>
                     Mi enfoque
                 </strong>
+
 
                 <p>
 
@@ -1083,10 +1490,12 @@
 
                 </p>
 
+
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -1096,7 +1505,7 @@
 
 <!-- =====================================================
      ESPECIALIDADES
-===================================================== -->
+========================================================= -->
 
 <section id="especialidades">
 
@@ -1105,29 +1514,38 @@
 
         <div class="section-title">
 
+
             <small>
                 Lo que hago
             </small>
+
 
             <h2>
                 Especialidades
             </h2>
 
+
         </div>
+
 
 
         <div class="cards">
 
 
+            <!-- LMS -->
+
             <div class="card">
+
 
                 <div class="card-icon">
                     LMS
                 </div>
 
+
                 <h3>
                     Plataformas LMS
                 </h3>
+
 
                 <p>
 
@@ -1136,19 +1554,25 @@
 
                 </p>
 
+
             </div>
 
 
 
+            <!-- DATA -->
+
             <div class="card">
+
 
                 <div class="card-icon">
                     DATA
                 </div>
 
+
                 <h3>
                     Analítica de datos
                 </h3>
+
 
                 <p>
 
@@ -1158,19 +1582,25 @@
 
                 </p>
 
+
             </div>
 
 
 
+            <!-- AUTOMATIZACION -->
+
             <div class="card">
+
 
                 <div class="card-icon">
                     ⚙
                 </div>
 
+
                 <h3>
                     Automatización
                 </h3>
+
 
                 <p>
 
@@ -1179,10 +1609,12 @@
 
                 </p>
 
+
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -1192,7 +1624,7 @@
 
 <!-- =====================================================
      TECNOLOGIAS
-===================================================== -->
+========================================================= -->
 
 <section id="tecnologias">
 
@@ -1201,13 +1633,16 @@
 
         <div class="section-title">
 
+
             <small>
                 Herramientas
             </small>
 
+
             <h2>
                 Tecnologías
             </h2>
+
 
             <p>
 
@@ -1216,60 +1651,76 @@
 
             </p>
 
+
         </div>
 
 
+
         <div class="tech-grid">
+
 
             <div class="tech">
                 Moodle
             </div>
 
+
             <div class="tech">
                 Brightspace
             </div>
+
 
             <div class="tech">
                 Chamilo
             </div>
 
+
             <div class="tech">
                 LearnDash
             </div>
+
 
             <div class="tech">
                 Power Automate
             </div>
 
+
             <div class="tech">
                 SharePoint
             </div>
+
 
             <div class="tech">
                 Excel
             </div>
 
+
             <div class="tech">
                 SQL
             </div>
+
 
             <div class="tech">
                 Python
             </div>
 
+
             <div class="tech">
                 R
             </div>
+
 
             <div class="tech">
                 Power BI
             </div>
 
+
             <div class="tech">
                 GitHub
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -1279,7 +1730,7 @@
 
 <!-- =====================================================
      PROYECTOS
-===================================================== -->
+========================================================= -->
 
 <section id="proyectos">
 
@@ -1288,33 +1739,44 @@
 
         <div class="section-title">
 
+
             <small>
                 Trabajo realizado
             </small>
+
 
             <h2>
                 Proyectos
             </h2>
 
+
         </div>
+
 
 
         <div class="projects">
 
 
+            <!-- PROYECTO 1 -->
+
             <div class="project">
+
 
                 <div class="project-top"></div>
 
+
                 <div class="project-content">
+
 
                     <div class="project-label">
                         Automatización
                     </div>
 
+
                     <h3>
                         Soporte DIDE
                     </h3>
+
 
                     <p>
 
@@ -1325,25 +1787,34 @@
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
 
+            <!-- PROYECTO 2 -->
+
             <div class="project">
+
 
                 <div class="project-top"></div>
 
+
                 <div class="project-content">
+
 
                     <div class="project-label">
                         Analítica
                     </div>
 
+
                     <h3>
                         Dashboard Educación Continua
                     </h3>
+
 
                     <p>
 
@@ -1354,25 +1825,34 @@
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
 
+            <!-- PROYECTO 3 -->
+
             <div class="project">
+
 
                 <div class="project-top"></div>
 
+
                 <div class="project-content">
+
 
                     <div class="project-label">
                         LMS
                     </div>
 
+
                     <h3>
                         Gestión de plataformas educativas
                     </h3>
+
 
                     <p>
 
@@ -1383,12 +1863,15 @@
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -1398,7 +1881,7 @@
 
 <!-- =====================================================
      EXPERIENCIA
-===================================================== -->
+========================================================= -->
 
 <section id="experiencia">
 
@@ -1407,15 +1890,19 @@
 
         <div class="section-title">
 
+
             <small>
                 Trayectoria
             </small>
+
 
             <h2>
                 Experiencia
             </h2>
 
+
         </div>
+
 
 
         <div class="timeline">
@@ -1423,13 +1910,16 @@
 
             <div class="timeline-item">
 
+
                 <span>
                     ACTUALMENTE
                 </span>
 
+
                 <h3>
                     Tecnología y Educación
                 </h3>
+
 
                 <p>
 
@@ -1440,19 +1930,23 @@
 
                 </p>
 
+
             </div>
 
 
 
             <div class="timeline-item">
 
+
                 <span>
                     EXPERIENCIA PROFESIONAL
                 </span>
 
+
                 <h3>
                     Transformación digital
                 </h3>
+
 
                 <p>
 
@@ -1462,19 +1956,23 @@
 
                 </p>
 
+
             </div>
 
 
 
             <div class="timeline-item">
 
+
                 <span>
                     ESPECIALIZACIÓN
                 </span>
 
+
                 <h3>
                     Plataformas LMS
                 </h3>
+
 
                 <p>
 
@@ -1484,10 +1982,12 @@
 
                 </p>
 
+
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -1497,7 +1997,7 @@
 
 <!-- =====================================================
      FORMACION
-===================================================== -->
+========================================================= -->
 
 <section id="formacion">
 
@@ -1506,15 +2006,19 @@
 
         <div class="section-title">
 
+
             <small>
                 Formación
             </small>
+
 
             <h2>
                 Formación académica
             </h2>
 
+
         </div>
+
 
 
         <div class="education">
@@ -1522,9 +2026,11 @@
 
             <div class="education-item">
 
+
                 <h3>
                     Ingeniería de Sistemas
                 </h3>
+
 
                 <p>
 
@@ -1534,15 +2040,18 @@
 
                 </p>
 
+
             </div>
 
 
 
             <div class="education-item">
 
+
                 <h3>
                     Maestría en Analítica de Datos
                 </h3>
+
 
                 <p>
 
@@ -1552,10 +2061,12 @@
 
                 </p>
 
+
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -1565,25 +2076,29 @@
 
 <!-- =====================================================
      CONTACTO
-===================================================== -->
+========================================================= -->
 
 <section
     class="contact"
     id="contacto"
 >
 
+
     <div class="container">
 
 
         <div class="section-title">
 
+
             <small>
                 Contacto
             </small>
 
+
             <h2>
                 ¿Hablamos?
             </h2>
+
 
             <p>
 
@@ -1593,7 +2108,9 @@
 
             </p>
 
+
         </div>
+
 
 
         <div class="contact-box">
@@ -1601,28 +2118,36 @@
 
             <div>
 
+
                 <h3>
                     Edgar Orjuela
                 </h3>
+
 
                 <p>
                     Ingeniero de Sistemas · Tecnología · Datos
                 </p>
 
+
             </div>
+
 
 
             <a
                 href="mailto:ingorjuela@gmail.com"
                 class="btn btn-primary"
             >
+
                 Enviar correo
+
             </a>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -1630,21 +2155,25 @@
 
 <!-- =====================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
+
 
     <p>
 
         © 2026 Edgar Orjuela ·
+
         <span>
             Portafolio profesional
         </span>
 
     </p>
 
+
 </footer>
 
 
 </body>
+
 </html>

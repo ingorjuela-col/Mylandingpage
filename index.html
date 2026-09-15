@@ -4,53 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Edgar Orjuela | Tecnología, Datos y Educación</title>
+    <title>Edgar Orjuela | Portafolio Profesional</title>
 
-    <!-- Tipografía -->
+    <meta name="description" content="Portafolio profesional de Edgar Orjuela - Ingeniería de Sistemas, transformación digital, LMS, analítica de datos y automatización.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Iconos -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
-        /* =========================
-           IDENTIDAD EL BOSQUE
-        ========================= */
+        /* ==============================
+           VARIABLES
+        ============================== */
 
         :root {
             --verde: #3E4729;
             --verde-oscuro: #293019;
-            --verde-claro: #eef0e8;
+            --verde-claro: #EEF0E8;
+
             --naranja: #F5841F;
-            --naranja-claro: #fff1e5;
+            --naranja-claro: #FFF1E5;
 
-            --blanco: #ffffff;
-            --gris-fondo: #f6f7f4;
-            --gris: #68706a;
-            --texto: #252a25;
-            --borde: #e1e4dd;
+            --blanco: #FFFFFF;
+            --gris-fondo: #F6F7F4;
+            --gris: #666666;
+            --gris-claro: #E5E7E1;
+            --negro: #202020;
 
-            --max-width: 1180px;
+            --max-width: 1150px;
         }
+
+
+        /* ==============================
+           GENERAL
+        ============================== */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--texto);
+            font-family: "Inter", Arial, sans-serif;
+            color: var(--negro);
             background: var(--blanco);
             line-height: 1.6;
         }
@@ -60,179 +59,106 @@
             color: inherit;
         }
 
-        img {
-            max-width: 100%;
-        }
-
         .container {
             width: 90%;
             max-width: var(--max-width);
             margin: auto;
         }
 
-        /* =========================
+
+        /* ==============================
            HEADER
-        ========================= */
+        ============================== */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-
             background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid var(--gris-claro);
             backdrop-filter: blur(10px);
-
-            border-bottom: 1px solid var(--borde);
         }
 
-        .nav {
-            min-height: 76px;
-
+        .navbar {
+            min-height: 75px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             gap: 30px;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-symbol {
-            width: 42px;
-            height: 42px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: var(--verde);
-            color: white;
-
-            border-radius: 50%;
-
+        .logo {
+            font-size: 22px;
             font-weight: 800;
-            font-size: 16px;
-        }
-
-        .brand-text strong {
-            display: block;
             color: var(--verde);
-            font-size: 15px;
         }
 
-        .brand-text span {
-            font-size: 11px;
-            color: var(--gris);
+        .logo span {
+            color: var(--naranja);
         }
 
-        .menu {
+        nav {
             display: flex;
-            gap: 6px;
-            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .menu a {
-            padding: 9px 13px;
-
+        nav a {
+            padding: 8px 12px;
+            border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
-
-            border-radius: 20px;
-
-            transition: .3s;
-        }
-
-        .menu a:hover {
-            background: var(--verde-claro);
             color: var(--verde);
+            transition: 0.3s;
         }
 
-        /* =========================
+        nav a:hover {
+            background: var(--verde-claro);
+            color: var(--naranja);
+        }
+
+
+        /* ==============================
            HERO
-        ========================= */
+        ============================== */
 
         .hero {
-            position: relative;
-            overflow: hidden;
-
             background:
                 linear-gradient(
                     135deg,
-                    #f8f9f6 0%,
-                    #ffffff 60%,
-                    #eef0e8 100%
+                    var(--verde) 0%,
+                    var(--verde-oscuro) 100%
                 );
 
+            color: white;
             padding: 90px 0;
         }
 
-        .hero::before {
-            content: "";
-
-            position: absolute;
-
-            width: 420px;
-            height: 420px;
-
-            border-radius: 50%;
-
-            background: var(--verde);
-
-            opacity: .05;
-
-            right: -150px;
-            top: -180px;
-        }
-
         .hero-grid {
-            position: relative;
-
             display: grid;
-            grid-template-columns: 1.3fr .7fr;
-
+            grid-template-columns: 1.4fr 0.8fr;
             align-items: center;
-
             gap: 70px;
         }
 
         .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            color: var(--verde);
-
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 7px 15px;
+            border-radius: 30px;
             font-size: 13px;
-            font-weight: 800;
-
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-
+            font-weight: 700;
+            letter-spacing: 1px;
             margin-bottom: 20px;
         }
 
-        .eyebrow::before {
-            content: "";
-
-            width: 28px;
-            height: 3px;
-
-            background: var(--naranja);
-
-            border-radius: 10px;
-        }
-
         .hero h1 {
-            font-size: clamp(42px, 6vw, 72px);
-
+            font-size: clamp(42px, 6vw, 68px);
             line-height: 1.05;
-
-            letter-spacing: -3px;
-
-            color: var(--verde);
+            margin-bottom: 25px;
+            max-width: 800px;
         }
 
         .hero h1 span {
@@ -240,619 +166,466 @@
         }
 
         .hero-description {
-            max-width: 680px;
-
-            margin: 25px 0;
-
             font-size: 18px;
-
-            color: var(--gris);
+            max-width: 700px;
+            color: #E8EADF;
+            margin-bottom: 30px;
         }
 
         .tags {
             display: flex;
+            gap: 10px;
             flex-wrap: wrap;
-            gap: 9px;
-
-            margin: 25px 0;
+            margin-bottom: 30px;
         }
 
         .tag {
-            padding: 8px 13px;
-
-            background: white;
-
-            border: 1px solid var(--borde);
-
+            padding: 7px 13px;
             border-radius: 20px;
-
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
             font-size: 12px;
-            font-weight: 700;
-
-            color: var(--verde);
+            font-weight: 600;
         }
 
         .buttons {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-
-            margin-top: 30px;
         }
 
         .btn {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            gap: 9px;
-
-            padding: 13px 20px;
-
+            display: inline-block;
+            padding: 13px 22px;
             border-radius: 8px;
-
-            font-size: 14px;
             font-weight: 700;
-
-            transition: .3s;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
         .btn-primary {
-            background: var(--verde);
+            background: var(--naranja);
             color: white;
         }
 
         .btn-primary:hover {
-            background: var(--verde-oscuro);
             transform: translateY(-2px);
+            opacity: 0.9;
         }
 
         .btn-secondary {
-            background: white;
-
-            color: var(--verde);
-
-            border: 1px solid var(--borde);
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
         }
 
         .btn-secondary:hover {
-            border-color: var(--verde);
+            background: white;
+            color: var(--verde);
         }
 
-        /* =========================
-           FOTO
-        ========================= */
+
+        /* ==============================
+           FOTO PERFIL
+        ============================== */
 
         .profile-card {
             background: white;
-
-            border: 1px solid var(--borde);
-
-            border-radius: 18px;
-
+            color: var(--negro);
+            border-radius: 25px;
             padding: 35px;
-
             text-align: center;
-
-            box-shadow: 0 18px 45px rgba(35,45,30,.10);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
         }
 
         .profile-circle {
-            width: 190px;
-            height: 190px;
-
-            margin: auto auto 25px;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px;
 
             border-radius: 50%;
-
             overflow: hidden;
 
-            border: 6px solid white;
+            border: 7px solid white;
 
-            outline: 5px solid var(--verde-claro);
+            outline: 5px solid var(--naranja);
 
-            box-shadow: 0 12px 30px rgba(0,0,0,.12);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+
+            background: var(--verde-claro);
         }
 
         .profile-circle img {
             width: 100%;
             height: 100%;
 
-            object-fit: cover;
-
             display: block;
+
+            object-fit: cover;
         }
 
-        .profile-card h2 {
+        .profile-card h3 {
             color: var(--verde);
-
-            font-size: 23px;
-
-            margin-bottom: 5px;
+            font-size: 22px;
+            margin-bottom: 6px;
         }
 
         .profile-card p {
             color: var(--gris);
-
             font-size: 14px;
         }
 
         .profile-line {
-            width: 45px;
-            height: 3px;
-
+            width: 50px;
+            height: 4px;
             background: var(--naranja);
-
-            margin: 20px auto;
+            margin: 18px auto;
+            border-radius: 5px;
         }
 
-        .profile-items {
-            display: grid;
-            gap: 10px;
 
-            color: var(--gris);
-
-            font-size: 13px;
-        }
-
-        .profile-items i {
-            color: var(--naranja);
-
-            width: 20px;
-        }
-
-        /* =========================
+        /* ==============================
            SECCIONES
-        ========================= */
+        ============================== */
 
         section {
             padding: 90px 0;
         }
 
-        .section-header {
-            max-width: 700px;
+        section:nth-child(even) {
+            background: var(--gris-fondo);
+        }
 
+        .section-title {
             margin-bottom: 45px;
         }
 
-        .section-label {
+        .section-title small {
             color: var(--naranja);
-
-            font-size: 12px;
-
             font-weight: 800;
-
-            letter-spacing: 1.5px;
-
             text-transform: uppercase;
-
-            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+            font-size: 12px;
         }
 
-        .section-header h2 {
-            font-size: 38px;
-
-            line-height: 1.15;
-
+        .section-title h2 {
             color: var(--verde);
+            font-size: 36px;
+            margin-top: 8px;
         }
 
-        .section-header p {
-            margin-top: 15px;
-
+        .section-title p {
             color: var(--gris);
+            max-width: 700px;
+            margin-top: 10px;
         }
 
-        /* =========================
+
+        /* ==============================
            SOBRE MI
-        ========================= */
-
-        .about {
-            background: white;
-        }
+        ============================== */
 
         .about-grid {
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
-            gap: 60px;
-        }
-
-        .about-text {
-            font-size: 16px;
-
-            color: var(--gris);
+            gap: 50px;
+            align-items: start;
         }
 
         .about-text p {
             margin-bottom: 18px;
+            color: #555;
         }
 
         .highlight {
-            padding: 25px;
-
             background: var(--verde-claro);
-
-            border-left: 4px solid var(--naranja);
-
+            border-left: 5px solid var(--naranja);
+            padding: 25px;
             border-radius: 8px;
+        }
 
+        .highlight strong {
             color: var(--verde);
-
-            font-weight: 600;
         }
 
-        /* =========================
+
+        /* ==============================
            ESPECIALIDADES
-        ========================= */
-
-        .specialties {
-            background: var(--gris-fondo);
-        }
+        ============================== */
 
         .cards {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
-            gap: 22px;
+            gap: 25px;
         }
 
         .card {
             background: white;
-
-            border: 1px solid var(--borde);
-
-            border-radius: 14px;
-
-            padding: 28px;
-
-            transition: .3s;
+            border: 1px solid var(--gris-claro);
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-5px);
-
-            box-shadow: 0 15px 35px rgba(40,50,30,.08);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
         .card-icon {
             width: 50px;
             height: 50px;
-
             display: flex;
             align-items: center;
             justify-content: center;
 
-            background: var(--naranja-claro);
+            border-radius: 12px;
 
-            color: var(--naranja);
+            background: var(--verde-claro);
+            color: var(--verde);
 
-            border-radius: 10px;
+            font-size: 24px;
 
             margin-bottom: 20px;
-
-            font-size: 20px;
         }
 
         .card h3 {
             color: var(--verde);
-
             margin-bottom: 10px;
+            font-size: 19px;
         }
 
         .card p {
             color: var(--gris);
-
             font-size: 14px;
         }
 
-        /* =========================
-           TECNOLOGIAS
-        ========================= */
 
-        .tech {
-            background: white;
-        }
+        /* ==============================
+           TECNOLOGIAS
+        ============================== */
 
         .tech-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .tech-item {
-            padding: 20px;
-
-            border: 1px solid var(--borde);
-
-            border-radius: 10px;
-
-            text-align: center;
-
-            font-weight: 700;
-
+        .tech {
+            padding: 10px 16px;
+            border-radius: 25px;
+            background: white;
+            border: 1px solid var(--gris-claro);
             color: var(--verde);
-
-            background: #fff;
-
-            transition: .3s;
+            font-size: 14px;
+            font-weight: 700;
         }
 
-        .tech-item:hover {
-            background: var(--verde);
-
-            color: white;
-
-            transform: translateY(-3px);
-        }
-
-        .tech-item i {
-            display: block;
-
-            font-size: 25px;
-
-            margin-bottom: 8px;
-
+        .tech:hover {
+            border-color: var(--naranja);
             color: var(--naranja);
         }
 
-        /* =========================
+
+        /* ==============================
            PROYECTOS
-        ========================= */
+        ============================== */
 
         .projects {
-            background: var(--gris-fondo);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
-        .project-card {
+        .project {
+            border-radius: 15px;
+            overflow: hidden;
             background: white;
-
-            border-radius: 14px;
-
-            border: 1px solid var(--borde);
-
-            padding: 30px;
+            border: 1px solid var(--gris-claro);
         }
 
-        .project-number {
-            color: var(--naranja);
-
-            font-weight: 800;
-
-            font-size: 13px;
+        .project-top {
+            height: 8px;
+            background: var(--naranja);
         }
 
-        .project-card h3 {
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-content h3 {
             color: var(--verde);
-
-            margin: 10px 0;
+            margin-bottom: 12px;
         }
 
-        .project-card p {
+        .project-content p {
             color: var(--gris);
-
             font-size: 14px;
+            margin-bottom: 18px;
         }
 
-        /* =========================
+        .project-label {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--naranja);
+            text-transform: uppercase;
+        }
+
+
+        /* ==============================
            EXPERIENCIA
-        ========================= */
-
-        .experience {
-            background: white;
-        }
+        ============================== */
 
         .timeline {
-            max-width: 850px;
-
-            border-left: 2px solid var(--verde-claro);
-
+            border-left: 3px solid var(--verde);
             padding-left: 30px;
         }
 
         .timeline-item {
+            margin-bottom: 35px;
             position: relative;
-
-            margin-bottom: 40px;
         }
 
         .timeline-item::before {
             content: "";
+            width: 13px;
+            height: 13px;
 
             position: absolute;
-
-            left: -39px;
+            left: -38px;
             top: 5px;
 
-            width: 15px;
-            height: 15px;
-
-            background: var(--naranja);
-
-            border: 4px solid white;
-
             border-radius: 50%;
-
-            box-shadow: 0 0 0 2px var(--verde-claro);
+            background: var(--naranja);
+            border: 3px solid white;
         }
 
-        .timeline-date {
+        .timeline-item span {
             font-size: 12px;
-
             font-weight: 800;
-
             color: var(--naranja);
-
-            text-transform: uppercase;
         }
 
-        .timeline h3 {
+        .timeline-item h3 {
             color: var(--verde);
-
             margin: 5px 0;
         }
 
-        .timeline p {
+        .timeline-item p {
             color: var(--gris);
-
-            font-size: 14px;
         }
 
-        /* =========================
+
+        /* ==============================
            FORMACION
-        ========================= */
+        ============================== */
 
         .education {
-            background: var(--verde);
-
-            color: white;
-        }
-
-        .education .section-header h2 {
-            color: white;
-        }
-
-        .education .section-label {
-            color: var(--naranja);
-        }
-
-        .education-grid {
             display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
-        .education-card {
+        .education-item {
             padding: 25px;
-
-            background: rgba(255,255,255,.08);
-
-            border: 1px solid rgba(255,255,255,.15);
-
             border-radius: 12px;
+            background: white;
+            border: 1px solid var(--gris-claro);
         }
 
-        .education-card h3 {
-            margin-bottom: 7px;
+        .education-item h3 {
+            color: var(--verde);
+            font-size: 18px;
         }
 
-        .education-card p {
-            color: #dfe3da;
-
+        .education-item p {
+            color: var(--gris);
+            margin-top: 6px;
             font-size: 14px;
         }
 
-        /* =========================
+
+        /* ==============================
            CONTACTO
-        ========================= */
+        ============================== */
 
         .contact {
-            text-align: center;
+            background: var(--verde) !important;
+            color: white;
+        }
 
-            background: var(--gris-fondo);
+        .contact .section-title h2,
+        .contact .section-title p {
+            color: white;
         }
 
         .contact-box {
-            max-width: 750px;
-
-            margin: auto;
+            background: white;
+            color: var(--negro);
+            border-radius: 18px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
         }
 
-        .contact-box h2 {
+        .contact-box h3 {
             color: var(--verde);
-
-            font-size: 40px;
+            margin-bottom: 8px;
         }
 
         .contact-box p {
             color: var(--gris);
-
-            margin: 15px auto 25px;
         }
 
-        /* =========================
+
+        /* ==============================
            FOOTER
-        ========================= */
+        ============================== */
 
         footer {
             background: var(--verde-oscuro);
-
             color: white;
-
-            padding: 35px 0;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 13px;
         }
 
-        .footer-content {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
+        footer span {
+            color: var(--naranja);
         }
 
-        .footer-content p {
-            font-size: 12px;
 
-            color: #d6d9d0;
-        }
-
-        .social {
-            display: flex;
-
-            gap: 10px;
-        }
-
-        .social a {
-            width: 36px;
-            height: 36px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: rgba(255,255,255,.08);
-
-            transition: .3s;
-        }
-
-        .social a:hover {
-            background: var(--naranja);
-        }
-
-        /* =========================
+        /* ==============================
            RESPONSIVE
-        ========================= */
+        ============================== */
 
-        @media(max-width: 900px) {
+        @media (max-width: 900px) {
 
-            .menu {
-                display: none;
-            }
-
-            .hero-grid,
-            .about-grid,
-            .education-grid {
+            .hero-grid {
                 grid-template-columns: 1fr;
             }
 
-            .cards {
+            .cards,
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .tech-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 60px 0;
             }
 
             .hero {
@@ -860,78 +633,62 @@
             }
 
             .hero h1 {
-                font-size: 48px;
+                font-size: 42px;
             }
-        }
 
-        @media(max-width: 500px) {
-
-            .tech-grid {
+            .cards,
+            .projects,
+            .education {
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .section-header h2 {
-                font-size: 30px;
-            }
-
-            .profile-card {
-                padding: 25px;
-            }
-
             .profile-circle {
-                width: 160px;
-                height: 160px;
+                width: 170px;
+                height: 170px;
             }
 
-            .footer-content {
+            .contact-box {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                gap: 3px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 6px 8px;
             }
         }
 
     </style>
 </head>
 
+
 <body>
 
-<!-- =========================
+
+<!-- ==============================
      HEADER
-========================= -->
+============================== -->
 
 <header>
 
-    <div class="container nav">
+    <div class="container navbar">
 
-        <a href="#inicio" class="brand">
-
-            <div class="brand-symbol">
-                EO
-            </div>
-
-            <div class="brand-text">
-                <strong>Edgar Orjuela</strong>
-                <span>DIDE · Universidad El Bosque</span>
-            </div>
-
+        <a href="#inicio" class="logo">
+            Edgar <span>Orjuela</span>
         </a>
 
-        <nav class="menu">
-
+        <nav>
             <a href="#sobre-mi">Sobre mí</a>
-
             <a href="#especialidades">Especialidades</a>
-
             <a href="#tecnologias">Tecnologías</a>
-
             <a href="#proyectos">Proyectos</a>
-
             <a href="#experiencia">Experiencia</a>
-
+            <a href="#formacion">Formación</a>
             <a href="#contacto">Contacto</a>
-
         </nav>
 
     </div>
@@ -939,20 +696,20 @@
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
 
-<main>
+<!-- ==============================
+     HERO
+============================== -->
 
 <section class="hero" id="inicio">
 
     <div class="container hero-grid">
 
+
         <div>
 
             <div class="eyebrow">
-                Ingeniero de Sistemas
+                INGENIERO DE SISTEMAS
             </div>
 
             <h1>
@@ -962,29 +719,25 @@
             </h1>
 
             <p class="hero-description">
-
-                Profesional orientado a la transformación digital,
-                la educación, las plataformas LMS, la analítica de
-                datos y la automatización de procesos.
-
+                Profesional con más de 10 años de experiencia en
+                transformación digital, plataformas educativas,
+                analítica de datos y automatización de procesos.
             </p>
+
 
             <div class="tags">
 
-                <span class="tag">LMS</span>
-
-                <span class="tag">DATOS</span>
-
-                <span class="tag">AUTOMATIZACIÓN</span>
-
-                <span class="tag">EDUCACIÓN</span>
+                <div class="tag">LMS</div>
+                <div class="tag">DATA</div>
+                <div class="tag">AUTOMATIZACIÓN</div>
+                <div class="tag">EDUCACIÓN</div>
 
             </div>
+
 
             <div class="buttons">
 
                 <a href="#proyectos" class="btn btn-primary">
-                    <i class="fa-solid fa-arrow-down"></i>
                     Ver proyectos
                 </a>
 
@@ -997,80 +750,59 @@
         </div>
 
 
+
         <!-- FOTO -->
 
-        <div>
+        <div class="profile-card">
 
-            <div class="profile-card">
+            <div class="profile-circle">
 
-                <div class="profile-circle">
-
-                    <!--
-                    COLOCA AQUÍ TU FOTO
-
-                    Ruta:
-                    assets/images/edgar.JPG
-                    -->
-
-                    <img
-                        src="assets/images/edgar.JPG"
-                        alt="Edgar Orjuela"
-                    >
-
-                </div>
-
-                <h2>Edgar Orjuela</h2>
-
-                <p>
-                    Tecnología · Datos · Educación
-                </p>
-
-                <div class="profile-line"></div>
-
-                <div class="profile-items">
-
-                    <span>
-                        <i class="fa-solid fa-laptop-code"></i>
-                        Plataformas educativas
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-chart-line"></i>
-                        Analítica de datos
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-gears"></i>
-                        Automatización
-                    </span>
-
-                </div>
+                <img
+                    src="assets/images/edgar.JPG"
+                    alt="Edgar Orjuela"
+                >
 
             </div>
 
+            <h3>
+                Edgar Orjuela
+            </h3>
+
+            <div class="profile-line"></div>
+
+            <p>
+                Tecnología · Educación · Datos
+            </p>
+
+            <p>
+                DIDE · Universidad El Bosque
+            </p>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     SOBRE MI
-========================= -->
 
-<section class="about" id="sobre-mi">
+<!-- ==============================
+     SOBRE MI
+============================== -->
+
+<section id="sobre-mi">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
+            <small>
                 Perfil profesional
-            </div>
+            </small>
 
             <h2>
-                Tecnología al servicio de la educación
+                Sobre mí
             </h2>
 
         </div>
@@ -1078,38 +810,42 @@
 
         <div class="about-grid">
 
+
             <div class="about-text">
 
                 <p>
                     Soy Ingeniero de Sistemas con más de 10 años
-                    de experiencia en proyectos de transformación
-                    digital, administración de plataformas LMS
-                    y gestión tecnológica.
+                    de experiencia liderando proyectos de
+                    transformación digital, administración de
+                    plataformas LMS y gestión tecnológica.
                 </p>
 
                 <p>
-                    Mi experiencia combina tecnología, educación,
-                    gestión de plataformas, analítica de datos
-                    y automatización de procesos.
+                    Mi experiencia se ha desarrollado principalmente
+                    en instituciones educativas, organismos
+                    internacionales y entidades públicas.
                 </p>
 
                 <p>
-                    Actualmente desarrollo proyectos orientados
-                    a convertir información y procesos en soluciones
-                    digitales más eficientes.
+                    Actualmente desarrollo proyectos relacionados
+                    con analítica de datos, automatización y
+                    transformación de procesos mediante tecnología.
                 </p>
 
             </div>
 
+
             <div class="highlight">
 
-                <i class="fa-solid fa-lightbulb"></i>
+                <strong>
+                    Mi enfoque
+                </strong>
 
-                <br><br>
-
-                Mi propósito es conectar tecnología,
-                datos y educación para crear soluciones
-                útiles, sencillas y sostenibles.
+                <p>
+                    Convertir necesidades reales de las
+                    organizaciones en soluciones tecnológicas
+                    sencillas, útiles y medibles.
+                </p>
 
             </div>
 
@@ -1120,38 +856,35 @@
 </section>
 
 
-<!-- =========================
-     ESPECIALIDADES
-========================= -->
 
-<section class="specialties" id="especialidades">
+<!-- ==============================
+     ESPECIALIDADES
+============================== -->
+
+<section id="especialidades">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
-                Especialidades
-            </div>
+            <small>
+                Lo que hago
+            </small>
 
             <h2>
-                Áreas en las que trabajo
+                Especialidades
             </h2>
-
-            <p>
-                Una combinación entre tecnología, educación,
-                datos y transformación digital.
-            </p>
 
         </div>
 
 
         <div class="cards">
 
+
             <div class="card">
 
                 <div class="card-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    LMS
                 </div>
 
                 <h3>
@@ -1159,8 +892,7 @@
                 </h3>
 
                 <p>
-                    Administración, configuración y seguimiento
-                    de plataformas educativas como Moodle,
+                    Administración y soporte de Moodle,
                     Brightspace, Chamilo y LearnDash.
                 </p>
 
@@ -1170,7 +902,7 @@
             <div class="card">
 
                 <div class="card-icon">
-                    <i class="fa-solid fa-chart-column"></i>
+                    DATA
                 </div>
 
                 <h3>
@@ -1178,8 +910,9 @@
                 </h3>
 
                 <p>
-                    Organización, transformación y visualización
-                    de información para apoyar la toma de decisiones.
+                    Organización, análisis y visualización
+                    de información para apoyar la toma
+                    de decisiones.
                 </p>
 
             </div>
@@ -1188,7 +921,7 @@
             <div class="card">
 
                 <div class="card-icon">
-                    <i class="fa-solid fa-robot"></i>
+                    ⚙
                 </div>
 
                 <h3>
@@ -1196,12 +929,12 @@
                 </h3>
 
                 <p>
-                    Diseño de procesos digitales utilizando
-                    herramientas como Power Automate,
-                    SharePoint y Excel.
+                    Automatización de procesos mediante
+                    herramientas digitales y flujos de trabajo.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1210,68 +943,50 @@
 </section>
 
 
-<!-- =========================
-     TECNOLOGIAS
-========================= -->
 
-<section class="tech" id="tecnologias">
+<!-- ==============================
+     TECNOLOGIAS
+============================== -->
+
+<section id="tecnologias">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
-                Tecnologías
-            </div>
+            <small>
+                Herramientas
+            </small>
 
             <h2>
-                Herramientas que hacen parte de mi trabajo
+                Tecnologías
             </h2>
+
+            <p>
+                Algunas de las tecnologías y plataformas
+                con las que trabajo.
+            </p>
 
         </div>
 
 
         <div class="tech-grid">
 
-            <div class="tech-item">
-                <i class="fa-solid fa-graduation-cap"></i>
-                Moodle
-            </div>
+            <div class="tech">Moodle</div>
+            <div class="tech">Brightspace</div>
+            <div class="tech">Chamilo</div>
+            <div class="tech">LearnDash</div>
 
-            <div class="tech-item">
-                <i class="fa-solid fa-chalkboard"></i>
-                Brightspace
-            </div>
+            <div class="tech">Power Automate</div>
+            <div class="tech">SharePoint</div>
+            <div class="tech">Excel</div>
 
-            <div class="tech-item">
-                <i class="fa-solid fa-database"></i>
-                SQL
-            </div>
+            <div class="tech">SQL</div>
+            <div class="tech">Python</div>
+            <div class="tech">R</div>
 
-            <div class="tech-item">
-                <i class="fa-solid fa-file-excel"></i>
-                Excel
-            </div>
-
-            <div class="tech-item">
-                <i class="fa-solid fa-chart-simple"></i>
-                Power BI
-            </div>
-
-            <div class="tech-item">
-                <i class="fa-solid fa-bolt"></i>
-                Power Automate
-            </div>
-
-            <div class="tech-item">
-                <i class="fa-brands fa-python"></i>
-                Python
-            </div>
-
-            <div class="tech-item">
-                <i class="fa-solid fa-code"></i>
-                R
-            </div>
+            <div class="tech">Power BI</div>
+            <div class="tech">GitHub</div>
 
         </div>
 
@@ -1280,84 +995,110 @@
 </section>
 
 
-<!-- =========================
-     PROYECTOS
-========================= -->
 
-<section class="projects" id="proyectos">
+<!-- ==============================
+     PROYECTOS
+============================== -->
+
+<section id="proyectos">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
-                Proyectos
-            </div>
+            <small>
+                Trabajo realizado
+            </small>
 
             <h2>
-                Soluciones que conectan tecnología y procesos
+                Proyectos
             </h2>
 
         </div>
 
 
-        <div class="cards">
+        <div class="projects">
 
-            <div class="project-card">
 
-                <div class="project-number">
-                    PROYECTO 01
+            <div class="project">
+
+                <div class="project-top"></div>
+
+                <div class="project-content">
+
+                    <div class="project-label">
+                        Automatización
+                    </div>
+
+                    <h3>
+                        Soporte DIDE
+                    </h3>
+
+                    <p>
+                        Automatización del registro y
+                        organización de solicitudes de
+                        soporte mediante formularios,
+                        correo, Excel y Power Automate.
+                    </p>
+
                 </div>
-
-                <h3>
-                    Automatización de soporte DIDE
-                </h3>
-
-                <p>
-                    Automatización del registro y organización
-                    de solicitudes de soporte mediante Outlook,
-                    Power Automate y Excel.
-                </p>
 
             </div>
 
 
-            <div class="project-card">
 
-                <div class="project-number">
-                    PROYECTO 02
+            <div class="project">
+
+                <div class="project-top"></div>
+
+                <div class="project-content">
+
+                    <div class="project-label">
+                        Analítica
+                    </div>
+
+                    <h3>
+                        Dashboard Educación Continua
+                    </h3>
+
+                    <p>
+                        Modelo de datos para consolidar
+                        información de programas,
+                        docentes, estudiantes,
+                        matrículas y seguimientos.
+                    </p>
+
                 </div>
-
-                <h3>
-                    Analítica para Educación Continuada
-                </h3>
-
-                <p>
-                    Diseño de estructuras de datos para integrar
-                    información de programas, docentes, estudiantes,
-                    matrículas y seguimientos.
-                </p>
 
             </div>
 
 
-            <div class="project-card">
 
-                <div class="project-number">
-                    PROYECTO 03
+            <div class="project">
+
+                <div class="project-top"></div>
+
+                <div class="project-content">
+
+                    <div class="project-label">
+                        LMS
+                    </div>
+
+                    <h3>
+                        Gestión de plataformas educativas
+                    </h3>
+
+                    <p>
+                        Administración de aulas virtuales,
+                        usuarios, contenidos, SCORM,
+                        reportes y soporte a proyectos
+                        de educación continuada.
+                    </p>
+
                 </div>
 
-                <h3>
-                    Administración de plataformas LMS
-                </h3>
-
-                <p>
-                    Gestión de cursos, usuarios, contenidos,
-                    reportes y seguimiento en plataformas
-                    educativas.
-                </p>
-
             </div>
+
 
         </div>
 
@@ -1366,22 +1107,23 @@
 </section>
 
 
-<!-- =========================
-     EXPERIENCIA
-========================= -->
 
-<section class="experience" id="experiencia">
+<!-- ==============================
+     EXPERIENCIA
+============================== -->
+
+<section id="experiencia">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
+            <small>
                 Trayectoria
-            </div>
+            </small>
 
             <h2>
-                Experiencia profesional
+                Experiencia
             </h2>
 
         </div>
@@ -1389,20 +1131,22 @@
 
         <div class="timeline">
 
+
             <div class="timeline-item">
 
-                <div class="timeline-date">
-                    Actualidad
-                </div>
+                <span>
+                    ACTUALMENTE
+                </span>
 
                 <h3>
                     Tecnología y Educación
                 </h3>
 
                 <p>
-                    Gestión de plataformas LMS, soporte tecnológico,
-                    analítica y automatización de procesos relacionados
-                    con Educación Continuada.
+                    Gestión de plataformas LMS,
+                    soporte tecnológico, analítica de datos
+                    y automatización de procesos en
+                    Educación Continuada.
                 </p>
 
             </div>
@@ -1410,18 +1154,18 @@
 
             <div class="timeline-item">
 
-                <div class="timeline-date">
-                    Experiencia profesional
-                </div>
+                <span>
+                    EXPERIENCIA PROFESIONAL
+                </span>
 
                 <h3>
                     Transformación digital
                 </h3>
 
                 <p>
-                    Participación en proyectos de implementación,
-                    administración y mejora de soluciones tecnológicas
-                    para organizaciones educativas y públicas.
+                    Participación y liderazgo de proyectos
+                    tecnológicos orientados a mejorar
+                    procesos organizacionales.
                 </p>
 
             </div>
@@ -1429,20 +1173,22 @@
 
             <div class="timeline-item">
 
-                <div class="timeline-date">
-                    Más de 10 años
-                </div>
+                <span>
+                    ESPECIALIZACIÓN
+                </span>
 
                 <h3>
-                    Ingeniería y gestión tecnológica
+                    Plataformas LMS
                 </h3>
 
                 <p>
-                    Experiencia en tecnología, plataformas,
-                    datos, procesos y gestión de proyectos.
+                    Experiencia en Moodle, Brightspace,
+                    Chamilo y LearnDash, incluyendo
+                    administración, configuración y soporte.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1451,55 +1197,60 @@
 </section>
 
 
-<!-- =========================
-     FORMACION
-========================= -->
 
-<section class="education">
+<!-- ==============================
+     FORMACION
+============================== -->
+
+<section id="formacion">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
+            <small>
                 Formación
-            </div>
+            </small>
 
             <h2>
-                Formación y aprendizaje continuo
+                Formación académica
             </h2>
 
         </div>
 
 
-        <div class="education-grid">
+        <div class="education">
 
-            <div class="education-card">
+
+            <div class="education-item">
 
                 <h3>
                     Ingeniería de Sistemas
                 </h3>
 
                 <p>
-                    Formación profesional orientada al desarrollo
-                    y gestión de soluciones tecnológicas.
+                    Formación profesional en tecnología,
+                    sistemas de información y gestión
+                    tecnológica.
                 </p>
 
             </div>
 
 
-            <div class="education-card">
+            <div class="education-item">
 
                 <h3>
                     Maestría en Analítica de Datos
                 </h3>
 
                 <p>
-                    Formación enfocada en datos, analítica,
-                    programación y toma de decisiones.
+                    Formación orientada al análisis,
+                    interpretación y visualización
+                    de datos para la toma de decisiones.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1508,39 +1259,55 @@
 </section>
 
 
-<!-- =========================
+
+<!-- ==============================
      CONTACTO
-========================= -->
+============================== -->
 
 <section class="contact" id="contacto">
 
     <div class="container">
 
-        <div class="contact-box">
+        <div class="section-title">
 
-            <div class="section-label">
+            <small>
                 Contacto
-            </div>
+            </small>
 
             <h2>
-                Conectemos
+                ¿Hablamos?
             </h2>
 
             <p>
-                Si quieres conocer más sobre mis proyectos,
-                experiencia o trabajo en tecnología y educación,
-                podemos conversar.
+                Si tienes un proyecto relacionado con
+                tecnología, educación, datos o
+                transformación digital, podemos conversar.
             </p>
 
-            <div class="buttons"
-                 style="justify-content:center;">
+        </div>
 
-                <a href="#" class="btn btn-primary">
-                    <i class="fa-solid fa-envelope"></i>
-                    Contactarme
-                </a>
+
+        <div class="contact-box">
+
+            <div>
+
+                <h3>
+                    Edgar Orjuela
+                </h3>
+
+                <p>
+                    Ingeniero de Sistemas · Tecnología · Datos
+                </p>
 
             </div>
+
+
+            <a
+                href="mailto:ingorjuela@gmail.com"
+                class="btn btn-primary"
+            >
+                Enviar correo
+            </a>
 
         </div>
 
@@ -1548,36 +1315,21 @@
 
 </section>
 
-</main>
 
 
-<!-- =========================
+<!-- ==============================
      FOOTER
-========================= -->
+============================== -->
 
 <footer>
 
-    <div class="container footer-content">
-
-        <p>
-            © 2026 Edgar Orjuela · Tecnología · Datos · Educación
-        </p>
-
-        <div class="social">
-
-            <a href="#" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-
-            <a href="#" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-
-        </div>
-
-    </div>
+    <p>
+        © 2026 Edgar Orjuela ·
+        <span>Portafolio profesional</span>
+    </p>
 
 </footer>
+
 
 </body>
 </html>

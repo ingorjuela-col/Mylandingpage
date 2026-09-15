@@ -121,11 +121,11 @@ nav a:hover {
 }
 
 /* =========================================================
-   HERO (CORREGIDO CON FONDO OSCURO)
+   HERO (FORZANDO EL FONDO VERDE CORRECTAMENTE)
 ========================================================= */
 .hero {
-    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-oscuro) 100%);
-    color: white;
+    background: linear-gradient(135deg, #3E4729 0%, #252A19 100%) !important;
+    color: #FFFFFF !important;
     padding: 110px 0;
     position: relative;
     overflow: hidden;
@@ -136,7 +136,7 @@ nav a:hover {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: rgba(245, 132, 31, 0.08);
+    background: rgba(245, 132, 31, 0.1);
     filter: blur(100px);
     border-radius: 50%;
     top: -100px;
@@ -155,9 +155,9 @@ nav a:hover {
 
 .eyebrow {
     display: inline-block;
-    background: rgba(47, 111, 115, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
+    background: rgba(47, 111, 115, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
     padding: 6px 16px;
     border-radius: 30px;
     font-size: 12px;
@@ -172,17 +172,17 @@ nav a:hover {
     margin-bottom: 20px;
     font-weight: 800;
     letter-spacing: -1px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .hero h1 span {
-    color: var(--naranja);
+    color: var(--naranja) !important;
 }
 
 .hero-description {
     font-size: 17px;
     max-width: 650px;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.9) !important;
     margin-bottom: 25px;
 }
 
@@ -196,9 +196,9 @@ nav a:hover {
 .tag {
     padding: 6px 14px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
     font-size: 12px;
     font-weight: 600;
     backdrop-filter: blur(5px);
@@ -232,15 +232,15 @@ nav a:hover {
 }
 
 .btn-secondary {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: white;
-    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--verde);
-    border-color: white;
+    background: white !important;
+    color: var(--verde) !important;
+    border-color: white !important;
 }
 
 /* =========================================================
@@ -639,23 +639,11 @@ section:nth-child(even) {
 /* =========================================================
    FOOTER
 ========================================================= */
-footer {
-    background: var(--verde-oscuro);
-    color: rgba(255, 255, 255, 0.7);
-    padding: 35px 0;
-    text-align: center;
-    font-size: 13px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
+<footer>
+    <p>© 2026 Edgar Orjuela · <span>Portafolio profesional</span></p>
+</footer>
 
-footer span {
-    color: var(--naranja);
-    font-weight: 600;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+<!-- RESPONSIVE -->
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
